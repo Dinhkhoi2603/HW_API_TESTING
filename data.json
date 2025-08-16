@@ -1,0 +1,88 @@
+[
+  {
+    "name": "phone",
+    "slug": "phone",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": 1,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "laptop",
+    "slug": "laptop",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": 2,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "tablet",
+    "slug": "tablet",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": 3,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "phone duplicate",
+    "slug": "phone",
+    "unique": false,
+    "expectedStatus": 422,
+    "productId": 999999,
+    "expectedProductStatus": 404
+  },
+  {
+    "slug": "no-name",
+    "unique": true,
+    "expectedStatus": 422,
+    "productId": 1,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "no-slug",
+    "unique": true,
+    "expectedStatus": 422,
+    "productId": 1,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "long-slug",
+    "slug": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "unique": true,
+    "expectedStatus": 422,
+    "productId": 4,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "điện thoại",
+    "slug": "dien-thoai",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": 5,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "<script>alert(1)</script>",
+    "slug": "xss",
+    "unique": true,
+    "expectedStatus": 422,
+    "productId": 6,
+    "expectedProductStatus": 200
+  },
+  {
+    "name": "camera",
+    "slug": "camera",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": "abc",
+    "expectedProductStatus": 404
+  },
+  {
+    "name": "mouse",
+    "slug": "mouse",
+    "unique": true,
+    "expectedStatus": 201,
+    "productId": 99999999,
+    "expectedProductStatus": 404
+  }
+]
